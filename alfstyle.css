@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+body,html{
+    height: 250px;
+    width: 300px;
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.alf_box{
+    height: 250px;
+    width: 300px;
+    background-image: url("asset/bg.png");
+    top: 0;
+    left: -1px;
+    overflow: hidden;
+    /*cursor: url("asset/tap.png") , auto;*/
+}
+.puzzle_board{
+    height: 218px;
+    width: 218px;
+    background-image: url("asset/blankbase.png");
+    top: 27px;
+    left: 41px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+/*.blink{*/
+/*    animation: blink .85s ease infinite;*/
+/*}*/
+.puzzle_cursor{
+    height: 46px;
+    width: 41px;
+    background-image: url("asset/tap.png");
+    opacity: 0;
+    top: 15px;
+    left: 35px;
+    z-index: 5;
+    animation: zoomOut .5s ease infinite;
+}
+@keyframes zoomOut {
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.97);
+    }
+}
+@keyframes blink {
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+.puzzle_start_text{
+    height: 75px;
+    width: 244px;
+    background-image: url("asset/start_text.png");
+    top: 85px;
+    left: 30px;
+    z-index: 2;
+}
+[class^='puzzle_brick_']{
+    z-index: 3;
+    cursor: grab;
+    transition: all .5s ease;
+}
+.puzzle_brick_a1{
+     height: 59px;
+     width: 66px;
+     background-image: url("asset/1.png");
+     top: 45px;
+     left: 52px;
+ }
+.puzzle_brick_a2{
+    height: 59px;
+    width: 76px;
+    background-image: url("asset/2.png");
+    top: 45px;
+    left: 104px;
+}
+.puzzle_brick_a3{
+    height: 59px;
+    width: 76px;
+    background-image: url("asset/3.png");
+    top: 45px;
+    left: 164px;
+}
+.puzzle_brick_b4{
+    height: 76px;
+    width: 77px;
+    background-image: url("asset/4.png");
+    top: 90px;
+    left: 58px;
+}
+.puzzle_brick_b5{
+    height: 77px;
+    width: 78px;
+    background-image: url("asset/5.png");
+    top: 89px;
+    left: 119px;
+}
+.puzzle_brick_b6{
+    height: 94px;
+    width: 59px;
+    background-image: url("asset/6.png");
+    top: 88px;
+    left: 181px;
+}
+.puzzle_brick_c7{
+    height: 75px;
+    width: 63px;
+    background-image: url("asset/7.png");
+    top: 151px;
+    left: 55px;
+}
+.puzzle_brick_c8{
+    height: 77px;
+    width: 94px;
+    background-image: url("asset/8.png");
+    top: 150px;
+    left: 103px;
+}
+.puzzle_brick_c9{
+    height: 60px;
+    width: 59px;
+    background-image: url("asset/9.png");
+    top: 167px;
+    left: 182px;
+}
+.puzzle_timer{
+    height: 36px;
+    width: 36px;
+    background-image: url("asset/timerblank.png");
+    top: 205px;
+    left: 10px;
+    color: white;
+    text-align: center;
+    padding-top: 8px;
+    font-size: 17px;
+}
+.alf_box_win{
+    height: 250px;
+    width: 300px;
+    background-image: url("asset/bg.png");
+    top: 0px;
+    left: 0px;
+    z-index: -6;
+}
+.puzzle_result_text{
+    height: 45px;
+    width: 261px;
+    background-image: url("asset/wintext.png");
+    transform: scale(.95);
+    left: 20px;
+    top: 10px;
+}
+.puzzle_matched{
+    height: 211px;
+    width: 210px;
+    background-image: url("asset/matched.png");
+    top: 45px;
+    left: 45px;
+    opacity: 0;
+}
+.alf_box_awareness{
+    height: 250px;
+    width: 300px;
+    background-image: url("asset/bg.png");
+    top: 0px;
+    left: 0px;
+    z-index: -7;
+}
+.awareness_text{
+    height: 58px;
+    width: 252px;
+    background-image: url("asset/awr1.png");
+    left: 24px;
+    top: 95px;
+    opacity: 0;
+}
+.alf_game_close{
+    height: 250px;
+    width: 300px;
+    background-image: url("asset/bg2.png");
+    top: 0px;
+    left: 0px;
+    z-index: -8;
+}
